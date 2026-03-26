@@ -13,7 +13,7 @@ export function initScrollAnimations(seaTurtle) {
           trigger: selector,
           start: 'top 85%',
           end: 'bottom 15%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         },
         opacity: 1,
         y: 0,
