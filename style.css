@@ -540,6 +540,9 @@ input:checked + .slider-track .thumb-icon.moon {
 .project-card {
   padding: 2rem;
   max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .project-header {
