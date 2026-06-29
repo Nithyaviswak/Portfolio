@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #050505;
+    --bg-elevated: #0a0a0a;
+    --bg-surface: #111111;
+    --text: #ffffff;
+    --text-secondary: rgba(255,255,255,0.7);
+    --text-tertiary: rgba(255,255,255,0.4);
+    --accent-blue: #007fff;
+    --accent-green: #00ff66;
+    --accent-white: #ffffff;
+    --border-subtle: rgba(255,255,255,0.08);
+    --border-active: rgba(0,127,255,0.4);
+
+    --font-display: 'Geist', sans-serif;
+    --font-body: 'Geist', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --t-display: clamp(40px, 7vw, 85px);
+    --t-h2: clamp(36px, 5vw, 64px);
+    --t-h3: clamp(22px, 3vw, 32px);
+    --t-body-lg: clamp(14px, 1.5vw, 18px);
+    --t-body: clamp(14px, 1.2vw, 16px);
+    --t-label: 11px;
+    --t-code: 13px;
+
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 64px;
+    --space-xl: 96px;
+    --space-2xl: 160px;
+    --page-padding: clamp(24px, 5vw, 80px);
+    --max-content: 1200px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(0, 127, 255, 0.3);
+    color: #ffffff;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
